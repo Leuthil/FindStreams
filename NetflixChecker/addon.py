@@ -6,9 +6,6 @@ addon = xbmcaddon.Addon()
 addonname = addon.getAddonInfo('name')
 icon = addon.getAddonInfo('icon')
 
-line1 = "This is a simple example of notifications"
-time = 5000 #in miliseconds
-
 intent = '"android.intent.action.VIEW"'
 netflixURL = 'https://www.netflix.com/watch/'
 movieId = '18171022'
