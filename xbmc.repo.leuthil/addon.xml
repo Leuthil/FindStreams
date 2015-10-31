@@ -1,24 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon
-  id="xbmc.repo.leuthil"
-  name="Leuthils Add-ons for Kodi"
-  version="0.0.1"
-  provider-name="leuthil">
-  <requires>
-    <import addon="xbmc.addon" version="12.0.0"/>
-  </requires>
-  <extension point="xbmc.addon.repository"
-             name="Leuthil Add-on Repository">
-    <info compressed="false">https://raw.githubusercontent.com/Leuthil/LeuthilKodiRepo/master/addons.xml</info>
-    <checksum>https://raw.githubusercontent.com/Leuthil/LeuthilKodiRepo/master/addons.xml.md5</checksum>
-    <datadir zip="true">https://raw.githubusercontent.com/Leuthil/LeuthilKodiRepo/master/releases</datadir>
-    <hashes>true</hashes>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Leuthil addons for Kodi</summary>
-    <description lang="en">Install addons from Leuthil</description>
-    <disclaimer lang="en"></disclaimer>
-    <platform>all</platform>
-    <nofanart>true</nofanart>
-  </extension>
+<addon id="xbmc.repo.leuthil" name="Leuthil repo" version="0.0.1" provider-name="leuthil">
+	<extension point="xbmc.addon.repository" name="leuthil Addon Repository">
+        <info compressed="false">https://raw.githubusercontent.com/Leuthil/LeuthilKodiRepo/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/Leuthil/LeuthilKodiRepo/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/Leuthil/LeuthilKodiRepo/master/releases</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Install Leuthil Addons</summary>
+		<description>Download and install addons from leuthil</description>
+		<platform>all</platform>
+        <nofanart>true</nofanart>
+	</extension>
 </addon>
