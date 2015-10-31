@@ -14,7 +14,7 @@
 		<license>GNU General Public License, v2</license>
 		<language></language>
 		<forum></forum>
-		<source>https://github.com/Leuthil/LeuthilKodiRepo/NetflixChecker</source>
+		<source>https://github.com/Leuthil/LeuthilKodiRepo/script.leuthil.netflixchecker</source>
 		<email>leuthil@gmail.com</email>
 	</extension>
 </addon>
