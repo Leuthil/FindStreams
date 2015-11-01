@@ -7,7 +7,7 @@ addonname = addon.getAddonInfo('name')
 icon = addon.getAddonInfo('icon')
 
 intent = '"android.intent.action.VIEW"'
-netflixURL = 'nflx://www.netflix.com/watch/'
+netflixURL = 'http://www.netflix.com/watch/'
 movieId = '18171022'
 movieURL = '"'+netflixURL+movieId+'"'
 
