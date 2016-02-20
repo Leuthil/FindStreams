@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="context.findstreams.contextmenu" name="FindStreams - Contextmenu" version="0.0.1" provider-name="Leuthil">
+<addon id="context.findstreams.contextmenu" name="FindStreams - Contextmenu" version="0.2.6" provider-name="Leuthil">
   <requires>
     <import addon="xbmc.python" version="2.20.0"/>
   </requires>
     <extension point="kodi.context.item" library="addon.py">
       <item>
-        <label>32000</label>
+        <label>Find Streams</label>
         <visible>StringCompare(ListItem.dbtype,movie) | StringCompare(ListItem.dbtype,tvshow) | StringCompare(ListItem.dbtype,season) | StringCompare(ListItem.dbtype,episode)</visible>
       </item>
     </extension>
@@ -15,7 +15,7 @@
     <description lang="en">Add FindStreams contextmenu button to context menu in video library. This contextmenu provides a "Find Streams" utility to search if the selected video is legally available from different providers in your country.</description>
     <platform>all</platform>
     <forum></forum>
-    <source>https://github.com/Leuthil/LeuthilKodiRepo/context.findstreams.contextmenu</source>
+    <source>https://github.com/Leuthil/LeuthilKodiRepo/</source>
   </extension>
 </addon>
 
