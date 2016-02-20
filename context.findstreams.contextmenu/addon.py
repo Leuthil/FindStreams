@@ -242,7 +242,7 @@ if __name__ == '__main__':
                 offerString = '%s on %s in %s' % (offer['monetization_type'].title(), offer['provider_name'], offer['presentation_type'].upper())
                 if offer['retail_price'] > 0:
                     offerString += ' for $%s %s' % (round(offer['retail_price'], 2), offer['currency'])
-                if 'element_count' in offer and offer['object_type'] == 'show':
+                if 'element_count' in offer and streamResults['object_type'] == 'show':
                     offerString += ' - %s/%s Seasons' % (offer['element_count'], totalSeasons)
                 offerStrings.append(offerString)
             xbmcgui.Dialog().select('%s (%s) Streams' % (streamResults['title'], streamResults['year']), offerStrings)
