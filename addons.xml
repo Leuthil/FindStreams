@@ -19,7 +19,7 @@
   </extension>
 </addon>
 
-<addon id="script.leuthil.netflixchecker" name="Netflix Checker" version="0.0.3" provider-name="leuthil">
+<addon id="script.leuthil.netflixchecker" name="Netflix Checker" version="0.0.4" provider-name="Leuthil">
     <requires>
 		<import addon="xbmc.python" version="2.14.0"/>
 	</requires>
@@ -34,7 +34,6 @@
 		<language></language>
 		<forum></forum>
 		<source>https://github.com/Leuthil/LeuthilKodiRepo/script.leuthil.netflixchecker</source>
-		<email>leuthil@gmail.com</email>
 	</extension>
 </addon>
 

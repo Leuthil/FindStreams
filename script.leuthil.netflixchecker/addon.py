@@ -2,13 +2,15 @@ import xbmc
 import xbmcaddon
 import xbmcgui
 
-addon = xbmcaddon.Addon()
+addon = xbmcaddon.Addon('script.leuthil.netflixchecker')
 addonname = addon.getAddonInfo('name')
 icon = addon.getAddonInfo('icon')
 
-intent = '"android.intent.action.VIEW"'
-netflixURL = 'http://www.netflix.com/watch/'
+package = '"%s"' % addon.getSetting('package')
+intent = '"%s"' % addon.getSetting('intent')
+datatype = '"%s"' % addon.getSetting('datatype')
+uri = addon.getSetting('uri')
 movieId = '18171022'
-movieURL = '"'+netflixURL+movieId+'"'
+movieURL = '"'+uri.replace('{id}',movieId)+'"'
 
-xbmc.executebuiltin('StartAndroidActivity(%s,%s,%s,%s)' % ("", intent, "", movieURL))
+xbmc.executebuiltin('XBMC.StartAndroidActivity(%s,%s,%s,%s)' % (package, intent, datatype, movieURL))
