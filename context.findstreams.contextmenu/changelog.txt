@@ -1,4 +1,0 @@
-v0.2.7 (2016-02-19)
-- Fixed bug with TV shows
-v0.2.6 (2016-02-19)
-- Initial release
