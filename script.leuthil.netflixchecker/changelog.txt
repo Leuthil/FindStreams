@@ -1,2 +1,0 @@
-0.04
-- Initial test
