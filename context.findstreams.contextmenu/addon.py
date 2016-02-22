@@ -234,7 +234,7 @@ if __name__ == '__main__':
         xbmc.executebuiltint('Notification("Setup", "Please choose a region!")')
     else:
         streamResults = getStreamOffers(title, content)
-        if len(streamResults) < 1:
+        if len(streamResults) < 1 or 'offers' not in streamResults or len(streamResults['offers'] < 1:
             xbmcgui.Dialog().notification('%s Streams' % title, 'No streams found!')
         else:
             offerStrings = []
