@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="context.findstreams.contextmenu" name="FindStreams - Contextmenu" version="0.2.7" provider-name="Leuthil">
+<addon id="context.findstreams.contextmenu" name="FindStreams - Find Legal Streams" version="0.2.7" provider-name="Leuthil">
   <requires>
     <import addon="xbmc.python" version="2.20.0"/>
   </requires>
@@ -10,10 +10,10 @@
       </item>
     </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en">FindStreams contextmenu button to video library</summary>
-    <description lang="en">Add FindStreams contextmenu button to context menu in video library. This contextmenu provides a "Find Streams" utility to search if the selected video is legally available from different providers in your country.</description>
+    <summary lang="en">Finds legal streams for movies/shows.</summary>
+    <description lang="en">Adds a context menu item for your movies/shows to find legal streams.</description>
     <platform>all</platform>
     <forum></forum>
-    <source>https://github.com/Leuthil/LeuthilKodiRepo/</source>
+    <source>https://github.com/Leuthil/FindStreams/</source>
   </extension>
 </addon>
