@@ -1,5 +1,5 @@
 # FindStreams
-Kodi addon that adds a context menu item for videos to help find legal streams in your region (free, rent, buy, etc).
+Kodi addon that adds a context menu item for movies/TV shows to help find legal streams in your region (free, rent, buy, etc).
 
 ## Supported Regions
 Finds streams for the following regions (JustWatch-supported regions):
@@ -13,5 +13,5 @@ Finds streams for the following regions (JustWatch-supported regions):
 - South Africa
 - New Zealand
 
-## Source
+## Data Source
 Currently uses data from [JustWatch.com](http://www.justwatch.com/).
