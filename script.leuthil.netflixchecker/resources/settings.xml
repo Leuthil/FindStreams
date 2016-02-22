@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<settings>
-    <category label="Settings">
-        <setting label="Package" type="text" id="package" default=""/>
-        <setting label="Intent" type="text" id="intent" default="android.intent.action.VIEW"/>
-        <setting label="DataType" type="text" id="datatype" default=""/>
-        <setting label="URI" type="text" id="uri" default="http://www.netflix.com/watch/{id}"/>
-    </category>
-</settings>
