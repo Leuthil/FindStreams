@@ -135,13 +135,17 @@ def getStreamOffers(search_query, content_type):
         offer = {}
         offer['provider_id'] = value['provider_id']
         offer['provider_name'] = providers[value['provider_id']]['clear_name']
+        offer['provider_technicalname'] = providers[value['provider_id']]['technical_name']
         offer['monetization_type'] = value['monetization_type']
         offer['presentation_type'] = value['presentation_type']
         offer['retail_price'] = value['retail_price']
+        offer['url'] = ''
         if offer['retail_price'] > 0:
             offer['currency'] = value['currency']
         if 'element_count' in value and 'show' in result['object_type']:
             offer['element_count'] = value['element_count']
+        if 'urls' in value and 'standard_web' in value['urls']:
+            offer['url'] = value['urls']['standard_web']
         result['offers'].append(offer)
     return result
 
@@ -228,14 +232,14 @@ if __name__ == '__main__':
     else:
         content.append('movie')
     year = xbmc.getInfoLabel('ListItem.Year')
-    title += " (%s)" % year
+    titleYear = "%s (%s)" % (title, year)
     if getRegionFilter() == '':
         findstreams.openSettings()
-        xbmc.executebuiltint('Notification("Setup", "Please choose a region!")')
+        xbmcgui.Dialog().notification('Setup', 'Please choose a region!')
     else:
-        streamResults = getStreamOffers(title, content)
-        if len(streamResults) < 1 or 'offers' not in streamResults or len(streamResults['offers']) < 1:
-            xbmcgui.Dialog().notification('%s Streams' % title, 'No streams found!')
+        streamResults = getStreamOffers(titleYear, content)
+        if len(streamResults) < 1 or 'offers' not in streamResults or len(streamResults['offers']) < 1 or (streamResults['year'] != year and streamResults['title'] != title):
+            xbmcgui.Dialog().notification('%s Streams' % titleYear, 'No streams found!')
         else:
             offerStrings = []
             for offer in streamResults['offers']:
@@ -245,4 +249,7 @@ if __name__ == '__main__':
                 if 'element_count' in offer and streamResults['object_type'] == 'show':
                     offerString += ' - %s/%s Seasons' % (offer['element_count'], totalSeasons)
                 offerStrings.append(offerString)
-            xbmcgui.Dialog().select('%s (%s) Streams' % (streamResults['title'], streamResults['year']), offerStrings)
+            selection = xbmcgui.Dialog().select('%s (%s) Streams' % (streamResults['title'], streamResults['year']), offerStrings)
+            xbmcgui.Dialog().notification('Stream Selected', 'Selected from provider %s' % streamResults['offers'][selection]['provider_technicalname'])
+            #if streamResults['offers'][selection]['provider_technicalname'] == 'play':
+            xbmc.executebuiltin('XBMC.StartAndroidActivity(%s,%s,%s,"%s")' % (findstreams.getSetting('action_play_package'), findstreams.getSetting('action_play_intent'), findstreams.getSetting('action_play_datatype'), streamResults['url']))

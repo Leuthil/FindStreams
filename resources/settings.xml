@@ -106,4 +106,9 @@
         <setting label="HD" type="bool" id="presentation_hd" default="true"/>
         <setting label="SD" type="bool" id="presentation_sd" default="false"/>
     </category>
+    <category label="Google Play Movies Settings">
+        <setting label="Package" type="text" id="action_play_package" default=""/>
+        <setting label="Intent" type="text" id="action_play_intent" default=""/>
+        <setting label="DataType" type="text" id="action_play_datatype" default=""/>
+    </category>
 </settings>
