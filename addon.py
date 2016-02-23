@@ -250,6 +250,4 @@ if __name__ == '__main__':
                     offerString += ' - %s/%s Seasons' % (offer['element_count'], totalSeasons)
                 offerStrings.append(offerString)
             selection = xbmcgui.Dialog().select('%s (%s) Streams' % (streamResults['title'], streamResults['year']), offerStrings)
-            xbmcgui.Dialog().notification('Stream Selected', 'Selected from provider %s' % streamResults['offers'][selection]['provider_technicalname'])
-            #if streamResults['offers'][selection]['provider_technicalname'] == 'play':
-            xbmc.executebuiltin('XBMC.StartAndroidActivity(%s,%s,%s,"%s")' % (findstreams.getSetting('action_play_package'), findstreams.getSetting('action_play_intent'), findstreams.getSetting('action_play_datatype'), streamResults['offers'][selection]['url']))
+            #TODO: Use selection to open streams where possible
