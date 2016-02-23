@@ -252,4 +252,4 @@ if __name__ == '__main__':
             selection = xbmcgui.Dialog().select('%s (%s) Streams' % (streamResults['title'], streamResults['year']), offerStrings)
             xbmcgui.Dialog().notification('Stream Selected', 'Selected from provider %s' % streamResults['offers'][selection]['provider_technicalname'])
             #if streamResults['offers'][selection]['provider_technicalname'] == 'play':
-            xbmc.executebuiltin('XBMC.StartAndroidActivity(%s,%s,%s,"%s")' % (findstreams.getSetting('action_play_package'), findstreams.getSetting('action_play_intent'), findstreams.getSetting('action_play_datatype'), streamResults['url']))
+            xbmc.executebuiltin('XBMC.StartAndroidActivity(%s,%s,%s,"%s")' % (findstreams.getSetting('action_play_package'), findstreams.getSetting('action_play_intent'), findstreams.getSetting('action_play_datatype'), streamResults['offers'][selection]['url']))
