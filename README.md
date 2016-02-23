@@ -15,3 +15,6 @@ Finds streams for the following regions (JustWatch-supported regions):
 
 ## Data Source
 Currently uses data from [JustWatch.com](http://www.justwatch.com/).
+
+## Future
+- Selecting stream offering brings you to the most correct and intuitive place to use that stream (website, deep link into app, etc.)
