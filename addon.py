@@ -7,6 +7,7 @@ import json
 
 # Initialization
 findstreams = xbmcaddon.Addon('context.findstreams.contextmenu')
+
 # Hard-coded list of all regions with their enum id
 fullRegionList = {
     '0': 'en_AU', #Australia
@@ -40,7 +41,32 @@ fullProviderList = [
     'vudu',
     'realeyz',
     'shomi',
-    'cravetv'
+    'cravetv',
+    'maxdome',
+    'maxdomestore',
+    'skysnap',
+    'skygo',
+    'watchever',
+    'wuaki',
+    'skyonline',
+    'chili',
+    'alleskino',
+    'netzkino',
+    'superpopcorn',
+    'cinepass',
+    'amazondvdbr',
+    'bbc',
+    'nowtv',
+    'itv',
+    'blinkbox',
+    'provider_looke',
+    'netmovies',
+    'volta',
+    'stan',
+    'quickflix',
+    'quickflixstore',
+    'showmax',
+    'boxoffice'
 ]
 # Hard-coded list of all monetization types
 fullMonetizationList = [
