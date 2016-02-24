@@ -22,6 +22,4 @@ Nice to haves for the future:
 - Selecting stream offering brings you to the most correct and intuitive place to use that stream (website, deep link into app, etc.)
 
 ## Repository
-Install the repo to get automatic updates.
-
-[Leuthil repo]([https://github.com/Leuthil/LeuthilKodiRepo/releases/download/v1.0/xbmc.repo.leuthil-0.0.2.zip)
+Install the repo to get automatic updates: [Leuthil Repository](https://github.com/Leuthil/LeuthilKodiRepo/releases/download/v1.0/xbmc.repo.leuthil-0.0.2.zip)
